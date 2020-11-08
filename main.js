@@ -20,24 +20,48 @@ function insertFunction() {
       alert('enter valid age!');
       insertFunction(); */
       
-      let age;
-      let age1 = document.getElementById("less").value;
-      let age2 = document.getElementById("more").value;
+      let age1 = document.getElementById('less').checked;
+      let age2 = document.getElementById('more').checked;
 
-      // checks if no radio button is filled by falsy check, function is then called again
-      if (age1 && age2 === false) {
+      // checks if no radio button is filled by falsy check, function exited
+      if (age1 === false && age2 === false) {
          alert('please inform us about your age');
-         insertFunction();
+         return;
       }
+
+      if (!age1) {
+         age2 = document.getElementById('more').value;
+      }
+
+      let firstname = document.getElementById('fname').value;
+      let lastname = document.getElementById('lname').value;
+      if (firstname === "" && lastname === "") {
+         alert('please enter your first & last name');
+         return;
+      }
+      if (firstname === "") {
+         alert('please enter your first name');
+         return;
+      } else if (lastname === "") {
+         alert('please enter your last name');
+         return;
+      }
+      
+      let lateRegister = document.getElementById('latereg').checked;
+
+      let raceNumberEarly = Math.round(Math.random() * 1001 + 1000);
+      let raceNumberLate = Math.round(Math.random() * 1000);
 
       if (age1) {
-         age = document.getElementById("less").value;
-      } else {
-         age = document.getElementById("more").value;
+         alert(`Dear ${firstname} ${lastname},\nYour race starts at 1230 hrs.\nYour race number is ${raceNumberLate}`);
+      } else if (age2 && !lateRegister) {
+         alert('Dear ${firstname} ${lastname},\nYour race starts at 0930 hrs since you are over 18 and registered early.\n' + `Your race number is ${raceNumberEarly}`);
+      } else if (age2 && lateRegister) {
+         alert('Dear ${firstname} ${lastname},\nYour race starts at 1100 hrs since you are over 18 and registered late.\n' + `Your race number is ${raceNumberLate}`);
       }
+      alert('Good luck on your race!');
 
-      alert(age);
-   
+  
    /* } */
 
 
