@@ -1,0 +1,60 @@
+/*  p {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 25;
+   padding: 15px;
+   color: brown;
+   background-color: rgba(165, 42, 42, 0.3);
+   display: inline-block;
+   border: solid 2px rgba(165, 42, 42, 1);
+   text-align: center;
+   border-radius: 10px;
+}
+*/
+
+body {
+   background-color: #efefef;
+}
+
+.RacingDay {
+   background-color: rgb(214, 49, 49);
+   background: linear-gradient(rgb(214, 49, 49), rgb(221, 132, 132));
+   overflow: hidden;
+   border: black solid 2px;
+}
+
+.RacingDay h1 {
+   float: left;
+   text-align: center;
+   letter-spacing: 0.3em;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   margin-top: 30px;
+   margin-left: 60px;
+}
+
+.raceFlag {
+   float: right;
+   min-width: 150px;
+   max-width: 150px;
+
+}
+
+.runningPeople {
+   overflow: hidden;
+   height: 220px;
+   border-bottom: 10px rgb(214, 49, 49) solid;
+}
+
+.runningPeople img {
+   opacity: 90%;
+   position: center right;
+   transform: translateY(-70px);
+   min-width: 500px;
+}
+
+.name {
+   margin-bottom: 10px;
+}
+
+.bottomForm {
+   margin-bottom: 20px;
+}
