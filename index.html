@@ -24,20 +24,26 @@
       <main>
          <form action="">
             <p class="name">Tell us about your age:</p>
-            <input class="hook" type="radio" id="less" name="age" value="less than 18">
-            <label for="less than 18">Less than 18</label> <br> 
-            <input class="bottomForm hook2" type="radio" id="more" name="age" value="18 or more">
-            <label for="18 or more">18 or more</label> <br>
+            <div class="form" data-errormsg = "">
+               <input class="hook" type="radio" id="less" name="age" value="less than 18">
+               <label for="less than 18">Less than 18</label> <br> 
+               <input class="bottomForm hook2" type="radio" id="more" name="age" value="18 or more">
+               <label for="18 or more">18 or more</label> <br>
+            </div>
 
-            <label for="fname">First name:</label> <br>
-            <input type="text" id="fname" name="fname"> <br>
-            <label for="lname">Last name:</label> <br>
-            <input class="bottomForm" type="text" id="lname" name="lname"> <br>
+            <div class="form" data-errormsg = "">
+               <label for="fname">First name:</label> <br>
+               <input type="text" id="fname" name="fname"> <br>
+            </div>
+            <div class="form2" data-errormsg = "">
+               <label for="lname">Last name:</label> <br>
+               <input class="bottomForm" type="text" id="lname" name="lname"> <br>
+            </div>
 
             <input class="bottomForm" type="checkbox" id="latereg" name="lateReg" value="Late registration? ">
             <label for="latereg">Late registration? </label> <br>
 
-            <input type="submit" value="submit" onclick="Send()">
+            <input type="submit" value="submit" onclick="ValidateAndSend()">
          </form>
       </main>
 

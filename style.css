@@ -59,6 +59,12 @@ body {
    margin-bottom: 20px;
 }
 
+.error::after{
+   background-color: hsl(10, 60%, 50%);
+   color: papayawhip;
+   content: attr(data-errormsg);
+}
+
 @media (min-width : 900px) {
    .runningPeople img {
       transform: translateY(-350px);
